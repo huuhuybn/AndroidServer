@@ -9,7 +9,7 @@ var storage = multer.diskStorage({
         cb(null, Date.now() + '-' + file.originalname);
     },
 });
-const upload = multer({dest: 'uploads/'})
+const upload = multer({storage: storage})
 var router = express.Router();
 
 /* GET home page. */
