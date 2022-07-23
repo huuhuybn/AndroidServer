@@ -43,7 +43,7 @@ router.post('/createUser', upload.single('avatar'), function (req, res) {
     data.password = password;
 
     data.avatar = req.file.originalname;
-    data.urlAvatar = req.file.path;
+    data.urlAvatar = req.file.destination;
 
     res.send(data);
 
