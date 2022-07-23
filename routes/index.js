@@ -22,7 +22,14 @@ router.post('/createUser', function (req, res) {
     var email = req.body.email;
     var password = req.body.password;
 
-    res.send(email);
+    var data = {
+        email: undefined,
+        password: undefined
+    }
+    data.email = email;
+    data.password = password;
+
+    res.send(data);
 
 })
 
